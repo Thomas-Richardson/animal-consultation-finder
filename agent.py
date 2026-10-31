@@ -363,11 +363,12 @@ def process_tags(text: str, items: list[dict], ctx) -> str:
         item = by_slug.get(slug)
         if not item:
             return ""  # the AI made up a slug: drop the tag rather than guess
+        # Each link goes on its own line, even if the AI put the tags side by side.
         if kind == "LINK":
-            link = f"[Respond on the official page]({respond_url(item)})"
-            return link if slug in has_cal else f"{link}\n{reminder(item)}"
+            link = f"\n[Respond on the official page]({respond_url(item)})\n"
+            return link if slug in has_cal else f"{link}{reminder(item)}\n"
         if kind == "CAL":
-            return reminder(item)
+            return f"\n{reminder(item)}\n"
         if kind == "ASKED":
             stats["asked"][slug] = stats["asked"].get(slug, 0) + 1
         elif kind == "SENT":
@@ -457,6 +458,9 @@ DRAFTING RULES
   reasons, their phrases. Don't summarise what they said before the draft: put it in the
   draft. If they gave you nothing personal, put a [square-bracket prompt] in the draft for
   them to add something.
+- Never add feelings, conclusions or details they didn't give you (for example "it made me
+  realise how aware pigs are"). Where a feeling or detail would help, put a
+  [square-bracket prompt] for them to write it.
 - For optional questions they have nothing to say on, write "Leave blank" rather than
   filling the space.
 - Answer the consultation's actual questions, in its order, with the question numbers
