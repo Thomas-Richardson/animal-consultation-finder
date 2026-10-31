@@ -1,8 +1,8 @@
-# Consult for Animals
+# Animal Consultation Finder
 
 ## Summary
 
-Consult for Animals finds open UK government consultations that affect animals and helps you write your own response before the deadline. It asks what you care about, picks the consultations that matter to you, explains them in plain English and drafts answers in your own words for you to edit and send.
+Animal Consultation Finder finds open UK government consultations that affect animals and helps you write your own response before the deadline. It asks what you care about, picks the consultations that matter to you, explains them in plain English and drafts answers in your own words for you to edit and send.
 
 Right now it knows the Defra consultation on phasing out carbon dioxide stunning of pigs in depth. That consultation is open to anyone and closes on 21 December 2026.
 

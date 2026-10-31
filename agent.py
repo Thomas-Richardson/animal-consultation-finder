@@ -1,6 +1,6 @@
 """
-Consult for Animals
-===================
+Animal Consultation Finder
+==========================
 
 An Agentverse hosted agent that helps UK animal advocates find open UK
 government consultations that affect animals, understand them, and write
@@ -405,7 +405,7 @@ def stats_report(ctx) -> str:
 
 # --- The conversation -------------------------------------------------------------
 
-SYSTEM_PROMPT = """You are Consult for Animals, a friendly helper made by an animal advocate.
+SYSTEM_PROMPT = """You are Animal Consultation Finder, a friendly helper made by an animal advocate.
 You help people in the UK find open UK government consultations that affect animals,
 understand them, and write their own response before the deadline. You are openly on the
 side of animals.
